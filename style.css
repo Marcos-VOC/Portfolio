@@ -1,0 +1,345 @@
+/* ── RESET & VARIÁVEIS ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg:           #0b0f1a;
+  --bg2:          #0f1523;
+  --texto:        #f1f5f9;
+  --texto-suave:  #94a3b8;
+  --destaque:     #f97316;
+  --borda:        rgba(255, 255, 255, 0.07);
+  --fonte-titulo: 'Syne', sans-serif;
+  --fonte-corpo:  'DM Sans', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--texto);
+  font-family: var(--fonte-corpo);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ── FUNDO COM CÓDIGO ── */
+.bg-code {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  opacity: 0.04;
+  font-family: 'Courier New', monospace;
+  font-size: 12.5px;
+  line-height: 1.9;
+  color: #60a5fa;
+  padding: 1.5rem 2rem;
+  white-space: pre-wrap;
+  word-break: break-all;
+  user-select: none;
+}
+
+/* ── NAVBAR ── */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 3rem;
+  background: rgba(11, 15, 26, 0.88);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--borda);
+  animation: fadeDown 0.6s ease both;
+}
+
+.nav-logo {
+  font-family: var(--fonte-corpo);
+  font-size: 19.5px;
+  font-weight: 500;
+  color: var(--texto);
+  text-decoration: none;
+  letter-spacing: 0.01em;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--texto-suave);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--texto);
+}
+
+/* Botão Github na nav */
+.btn-github {
+  background-color: var(--destaque) !important;
+  color: #fff !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  padding: 6px 18px !important;
+  border-radius: 6px;
+  transition: opacity 0.2s, transform 0.2s !important;
+}
+
+.btn-github:hover {
+  opacity: 0.85 !important;
+  transform: translateY(-1px) !important;
+}
+
+/* ── DROPDOWN ── */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: block;
+  position: absolute;
+  top: calc(100% + 14px);
+  left: 0;
+  background: #1a2030;
+  border: 1px solid var(--borda);
+  border-radius: 10px;
+  padding: 8px;
+  list-style: none;
+  min-width: 185px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+  z-index: 200;
+  opacity: 0;
+  transform: translateY(-8px);
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.dropdown-menu.aberto {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
+}
+
+.dropdown-menu li a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 7px;
+  font-size: 14px;
+  color: var(--texto) !important;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.dropdown-menu li a:hover {
+  background: rgba(255, 255, 255, 0.07);
+  color: var(--texto) !important;
+}
+
+.dropdown-menu li a img {
+  width: 20px;
+  height: 20px;
+  filter: invert(1);
+  flex-shrink: 0;
+}
+
+/* ── HERO ── */
+.hero {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 4rem;
+  padding-top: 80px;
+}
+
+.hero-content {
+  max-width: 520px;
+  animation: fadeUp 0.7s 0.2s ease both;
+}
+
+/* Label acima do título */
+.hero-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1.4rem;
+}
+
+.label-line {
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: var(--texto-suave);
+}
+
+.label-text {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--texto-suave);
+  font-weight: 400;
+}
+
+/* Título principal */
+h1 {
+  font-family: var(--fonte-titulo);
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--texto);
+  margin-bottom: 1.5rem;
+}
+
+/* Parágrafo */
+.hero-text {
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--texto-suave);
+  margin-bottom: 2.2rem;
+}
+
+/* Botões */
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  background-color: var(--destaque);
+  color: #fff;
+  font-family: var(--fonte-corpo);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 11px 26px;
+  border-radius: 7px;
+  text-decoration: none;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.btn-primary:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--texto);
+  font-family: var(--fonte-corpo);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 26px;
+  border-radius: 7px;
+  border: 1px solid var(--borda);
+  text-decoration: none;
+  transition: border-color 0.2s, background 0.2s, transform 0.2s;
+}
+
+.btn-outline:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.04);
+  transform: translateY(-2px);
+}
+
+/* ── LOGO PYTHON ── */
+.hero-visual {
+  position: absolute;
+  right: 4rem;
+  top: 40%;
+  transform: translateY(-50%);
+  width: 290px;
+  pointer-events: none;
+  user-select: none;
+  animation: fadeUp 0.7s 0.4s ease both;
+}
+
+.python-svg {
+  width: 100%;
+  filter:
+    drop-shadow(0 0 50px rgba(54, 105, 148, 0.35))
+    drop-shadow(0 0 100px rgba(255, 195, 49, 0.12));
+  animation: flutuar 5s ease-in-out infinite;
+}
+
+/* ── ANIMAÇÕES ── */
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes flutuar {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-16px); }
+}
+
+/* ── RESPONSIVO ── */
+@media (max-width: 860px) {
+  nav {
+    padding: 1rem 1.5rem;
+  }
+
+  .hero {
+    padding: 100px 1.5rem 2rem;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: auto;
+  }
+
+  .hero-visual {
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none;
+    width: 180px;
+    margin: 2rem auto 0;
+    animation: none;
+  }
+
+  .python-svg {
+    animation: none;
+  }
+}
+
+.python-svg {
+  transition: opacity 0.5s ease;
+}
+
+.python-svg.oculto {
+  opacity: 0;
+}
+
+.foto-perfil {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 50%;
+  filter: drop-shadow(0 0 40px rgba(249, 115, 22, 0.2));
+  border: 3px solid var(--destaque);
+}

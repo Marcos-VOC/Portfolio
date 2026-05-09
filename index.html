@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Marcos Vinicius — Dev Python</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" type="image/png" href="/home/marcos/Documentos/Programação/Portfolio/assets/img/tecnologia.png">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Fundo com código -->
+  <div class="bg-code" aria-hidden="true">
+def fibonacci(n):
+    if n == 0: return n
+    return fibonacci(n-1) + fibonacci(n-2)
+
+class Biblioteca:
+    def __init__(self):
+        self.livros = []
+    def adicionar(self, livro):
+        self.livros.append(livro)
+
+import pandas as pd
+import sqlite3
+
+def gerar_relatorio(db_path):
+    conn = sqlite3.connect(db_path)
+    df = pd.read_sql("SELECT * FROM vendas", conn)
+    return df.describe()
+
+for item in range(100):
+    print(f"Processando item {item}")
+
+SELECT p.nome, SUM(v.quantidade) as total
+FROM produtos p JOIN vendas v ON p.id = v.produto_id
+GROUP BY p.nome ORDER BY total DESC;
+
+def exportar_whatsapp(arquivo):
+    with open(arquivo, 'r', encoding='utf-8') as f:
+        linhas = f.readlines()
+    return parse_mensagens(linhas)
+
+while True:
+    try:
+        dados = coletar_dados()
+        processar(dados)
+    except Exception as e:
+        log_erro(e)
+
+import re
+pattern = r'(\d{2}/\d{2}/\d{4}), (\d{2}:\d{2}) - (.+?): (.+)'
+
+def controle_estoque(produto, qtd):
+    if qtd == 0:
+        enviar_alerta(produto)
+    return atualizar_db(produto, qtd)
+  </div>
+
+  <!-- Navbar -->
+  <nav>
+    <a href="index.html" class="nav-logo">Marcos Vinicius Oliveira Carianha</a>
+    <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+      <!-- Contato com dropdown -->
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle">Contato</a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="https://www.instagram.com/_marcosvncs/" target="_blank">
+              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram"/>
+              Instagram
+            </a>
+          </li>
+          <li>
+            <a href="https://wa.me/77999906223" target="_blank">
+              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp"/>
+              WhatsApp
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/marcos-vinicius-oliveira-carianha-40a345382/" target="_blank">
+              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn"/>
+              LinkedIn
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li><a href="sobremim.html">Sobre mim</a></li>
+      <li>
+        <a href="https://github.com/Marcos-VOC" target="_blank" class="btn-github">Github</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-label">
+        <span class="label-line"></span>
+        <span class="label-text">Desenvolvedor em formação</span>
+      </div>
+
+      <h1>
+        Desenvolvedor Python &amp;<br>
+        Entusiasta de Automação
+      </h1>
+
+      <p class="hero-text">
+        Olá, sou Marcos Vinicius, técnico em Informática pelo IFBA e estudante
+        de Bacharelado Interdisciplinar em Ciências e Tecnologia na UFOB.
+        Trabalho com Python, C, Java, HTML e CSS, com interesse especial em
+        automações e desenvolvimento backend.<br><br>
+        Comecei a programar ainda no ensino médio e desde então não parei. O
+        que me mantém na área é simples: programação me faz pensar de formas
+        que eu nunca pensaria no dia a dia.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="https://github.com/Marcos-VOC" target="_blank" class="btn-primary">Meus projetos</a>
+      </div>
+    </div>
+
+    <!-- Logo Python -->
+    <div class="hero-visual" aria-hidden="true">
+
+  <!-- Python -->
+  <svg class="python-svg lang-icon" data-index="0" viewBox="0 0 256 255" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="pyBlue" x1="12.959%" x2="79.639%" y1="12.039%" y2="78.201%">
+        <stop offset="0%" stop-color="#387EB8"/><stop offset="100%" stop-color="#366994"/>
+      </linearGradient>
+      <linearGradient id="pyYellow" x1="19.128%" x2="90.742%" y1="20.579%" y2="88.429%">
+        <stop offset="0%" stop-color="#FFE052"/><stop offset="100%" stop-color="#FFC331"/>
+      </linearGradient>
+    </defs>
+    <path fill="url(#pyBlue)" d="M126.916.072c-64.832 0-60.784 28.115-60.784 28.115l.072 29.128h61.868v8.745H41.631S.145 61.355.145 126.77c0 65.417 36.21 63.097 36.21 63.097h21.61v-30.356s-1.165-36.21 35.632-36.21h61.362s34.475.557 34.475-33.319V33.97S194.67.072 126.916.072zM92.802 19.99c6.174 0 11.179 5.006 11.179 11.179 0 6.174-5.005 11.179-11.179 11.179-6.174 0-11.179-5.005-11.179-11.179 0-6.173 5.005-11.179 11.179-11.179z"/>
+    <path fill="url(#pyYellow)" d="M128.757 254.126c64.832 0 60.784-28.115 60.784-28.115l-.072-29.127H127.6v-8.745h86.441s41.486 4.705 41.486-60.712c0-65.416-36.21-63.096-36.21-63.096h-21.61v30.355s1.165 36.21-35.632 36.21H100.075s-34.475-.557-34.475 33.32v56.013s-5.259 33.897 63.157 33.897zm34.114-19.918c-6.174 0-11.179-5.005-11.179-11.179 0-6.173 5.005-11.179 11.179-11.179 6.174 0 11.179 5.006 11.179 11.179 0 6.174-5.005 11.179-11.179 11.179z"/>
+  </svg>
+
+  <!-- C -->
+  <svg class="python-svg lang-icon" data-index="1" style="display:none" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+    <path fill="#659AD3" d="M115.4 30.7L67.1 2.9c-.8-.5-1.9-.7-3.1-.7-1.2 0-2.3.3-3.1.7l-48 27.9c-1.7 1-2.9 3.5-2.9 5.4v55.7c0 1.1.2 2.4 1 3.5l106.8-62c-.6-1.2-1.5-2.1-2.4-2.7z"/>
+    <path fill="#03599C" d="M10.7 95.3c.5.8 1.2 1.5 1.9 1.9l48.2 27.9c.8.5 1.9.7 3.1.7 1.2 0 2.3-.3 3.1-.7l48-27.9c1.7-1 2.9-3.5 2.9-5.4V36.1c0-.9-.1-1.9-.6-2.8l-106.6 62z"/>
+    <path fill="#fff" d="M85.3 76.1C81.1 83.5 73.1 88.5 64 88.5c-13.5 0-24.5-11-24.5-24.5s11-24.5 24.5-24.5c9.1 0 17.1 5 21.3 12.5l13-7.5c-6.8-11.9-19.6-20-34.3-20-21.8 0-39.5 17.7-39.5 39.5s17.7 39.5 39.5 39.5c14.6 0 27.4-8 34.2-19.8l-13-7.6z"/>
+  </svg>
+
+  <!-- Java -->
+  <svg class="python-svg lang-icon" data-index="2" style="display:none" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+    <path fill="#F8981D" d="M47.617 98.12s-4.767 2.774 3.397 3.71c9.892 1.13 14.947.968 25.845-1.092 0 0 2.871 1.795 6.873 3.351-24.439 10.47-55.308-.607-36.115-5.969zM44.629 84.455s-5.348 3.959 2.823 4.805c10.567 1.091 18.91 1.18 33.354-1.6 0 0 1.993 2.025 5.132 3.131-29.542 8.64-62.446.68-41.309-6.336z"/>
+    <path fill="#F8981D" d="M76.491 1.587S86.654 11.751 66.6 27.221c-16.454 13.001-3.752 20.406-.005 28.883-9.604-8.667-16.646-16.3-11.916-23.4C61.4 23.001 79.955 18.055 76.491 1.587z"/>
+    <path fill="#F8981D" d="M49.932 125.562s-3.632 2.99 3.999 3.292c18.945.766 33.496-.485 40.65-15.547 0 0 2.253 5.912-8.048 10.603-11.933 5.292-26.633 4.664-36.601 1.652zM48.057 110.239s-4.3 3.18 2.27 3.85c8.5.89 15.217 1.024 26.806-1.384 0 0 1.55 1.744 3.986 2.698-23.725 6.934-55.07.627-33.062-5.164z"/>
+    <path fill="#5382A1" d="M88.961 66.461s5.9 4.9-6.48 8.907c-23.536 7.131-97.93 9.283-118.569.283-7.425-3.23 6.5-7.706 10.87-8.653 4.563-1 7.174-.818 7.174-.818-8.25-5.807-53.303 11.403-22.89 16.33 82.956 13.458 151.235-6.063 129.895-16.049zM95.198 93.417c38.847-20.19 20.886-39.59 8.347-36.974-3.07.641-4.44 1.196-4.44 1.196s1.14-1.79 3.32-2.56c24.814-8.726 43.895 25.717-8 39.352 0-.001.6-.528.773-1.014z"/>
+  </svg>
+
+  <!-- SQL -->
+  <svg class="python-svg lang-icon" data-index="3" style="display:none" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+    <path fill="#00618A" d="M64 0C28.7 0 0 10.8 0 24v16c0 13.2 28.7 24 64 24s64-10.8 64-24V24C128 10.8 99.3 0 64 0z"/>
+    <path fill="#00618A" d="M64 72C28.7 72 0 62.5 0 51v17c0 13.2 28.7 24 64 24s64-10.8 64-24V51C128 62.5 99.3 72 64 72z"/>
+    <path fill="#00618A" d="M64 104c-35.3 0-64-9.5-64-21v17c0 13.2 28.7 24 64 24s64-10.8 64-24v-17c0 11.5-28.7 21-64 21z"/>
+    <ellipse fill="#007FA3" cx="64" cy="24" rx="64" ry="24"/>
+    <ellipse fill="#007FA3" cx="64" cy="24" rx="48" ry="18"/>
+    <path fill="#fff" d="M64 14c-17.7 0-32 4.5-32 10s14.3 10 32 10 32-4.5 32-10-14.3-10-32-10z" opacity=".4"/>
+  </svg>
+
+</div>
+  </section>
+
+  <!-- JavaScript no final, depois de todo o HTML -->
+  <script>
+  // Dropdown
+  const toggle = document.querySelector('.dropdown-toggle');
+  const menu = document.querySelector('.dropdown-menu');
+
+  toggle.addEventListener('click', function(e) {
+    e.preventDefault();
+    menu.classList.toggle('aberto');
+  });
+
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.dropdown')) {
+      menu.classList.remove('aberto');
+    }
+  });
+
+  // Troca de ícones
+  const icones = document.querySelectorAll('.lang-icon');
+  let atual = 0;
+
+  setInterval(function() {
+    const proximo = (atual + 1) % icones.length;
+
+    icones[atual].classList.add('oculto');
+
+    setTimeout(function() {
+      icones[atual].style.display = 'none';
+      icones[proximo].style.display = 'block';
+
+      setTimeout(function() {
+        icones[proximo].classList.remove('oculto');
+        atual = proximo;
+      }, 50);
+
+    }, 500);
+
+  }, 3000);
+</script>
+
+</body>
+</html>

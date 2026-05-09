@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Marcos Vinicius — Sobre mim</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" type="image/png" href="assets/img/tecnologia.png">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Fundo com código -->
+  <div class="bg-code" aria-hidden="true">
+def fibonacci(n):
+    if n == 0: return n
+    return fibonacci(n-1) + fibonacci(n-2)
+
+class Biblioteca:
+    def __init__(self):
+        self.livros = []
+    def adicionar(self, livro):
+        self.livros.append(livro)
+
+import pandas as pd
+import sqlite3
+
+def gerar_relatorio(db_path):
+    conn = sqlite3.connect(db_path)
+    df = pd.read_sql("SELECT * FROM vendas", conn)
+    return df.describe()
+
+for item in range(100):
+    print(f"Processando item {item}")
+
+SELECT p.nome, SUM(v.quantidade) as total
+FROM produtos p JOIN vendas v ON p.id = v.produto_id
+GROUP BY p.nome ORDER BY total DESC;
+
+def exportar_whatsapp(arquivo):
+    with open(arquivo, 'r', encoding='utf-8') as f:
+        linhas = f.readlines()
+    return parse_mensagens(linhas)
+
+while True:
+    try:
+        dados = coletar_dados()
+        processar(dados)
+    except Exception as e:
+        log_erro(e)
+
+import re
+pattern = r'(\d{2}/\d{2}/\d{4}), (\d{2}:\d{2}) - (.+?): (.+)'
+
+def controle_estoque(produto, qtd):
+    if qtd == 0:
+        enviar_alerta(produto)
+    return atualizar_db(produto, qtd)
+  </div>
+
+  <!-- Navbar -->
+  <nav>
+    <a href="index.html" class="nav-logo">Marcos Vinicius Oliveira Carianha</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle">Contato</a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="https://www.instagram.com/_marcosvncs/" target="_blank">
+              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram"/>
+              Instagram
+            </a>
+          </li>
+          <li>
+            <a href="https://wa.me/77999906223" target="_blank">
+              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp"/>
+              WhatsApp
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/marcos-vinicius-oliveira-carianha-40a345382/" target="_blank">
+              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn"/>
+              LinkedIn
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li><a href="sobremim.html">Sobre mim</a></li>
+      <li>
+        <a href="https://github.com/Marcos-VOC" target="_blank" class="btn-github">Github</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+
+    <div class="hero-content">
+      <div class="hero-label">
+        <span class="label-line"></span>
+        <span class="label-text">Desenvolvedor em formação</span>
+      </div>
+
+      <h1>Sobre mim</h1>
+
+      <p class="hero-text">
+        Cresci desmontando computadores com os olhos, querendo entender como tudo funcionava.
+        Entre jogos e curiosidade, fui descobrindo que o que eu realmente gostava era de estar
+        por dentro das coisas e a programação foi o caminho natural pra isso.<br><br>
+        Sou técnico em Informática pelo IFBA e estudo Ciências e Tecnologia, mas meu aprendizado
+        de verdade acontece na prática: construindo projetos, quebrando a cabeça em bugs e não
+        descansando enquanto não acho a solução. Essa persistência é o que me define como dev.<br><br>
+        Trabalho com Python, C, Java, HTML e CSS, e tenho focado em automações e backend.
+        Moro em Barreiras, Bahia, e estou em busca da minha primeira oportunidade na área.
+      </p>
+    </div>
+
+    <!-- Foto FORA do hero-content -->
+    <div class="hero-visual">
+      <img src="assets/img/foto.jpeg" alt="Marcos Vinicius" class="foto-perfil">
+    </div>
+
+  </section>
+
+  <script>
+    const toggle = document.querySelector('.dropdown-toggle');
+    const menu = document.querySelector('.dropdown-menu');
+
+    toggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      menu.classList.toggle('aberto');
+    });
+
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.dropdown')) {
+        menu.classList.remove('aberto');
+      }
+    });
+  </script>
+
+</body>
+</html>
